@@ -1,0 +1,452 @@
+{
+    "value": 4.2199507,
+    "description": "product of:",
+    "details": [
+        {
+            "value": 6.3299255,
+            "description": "sum of:",
+            "details": [
+                {
+                    "value": 0.023222063,
+                    "description": "max of:",
+                    "details": [
+                        {
+                            "value": 0.023222063,
+                            "description": "ConstantScore(created_at:[* TO 1461409180706]), product of:",
+                            "details": [
+                                {
+                                    "value": 1,
+                                    "description": "boost"
+                                },
+                                {
+                                    "value": 0.023222063,
+                                    "description": "queryNorm"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": 0.30722755,
+                    "description": "weight(actively_looking:T^10.0 in 184) [PerFieldSimilarity], result of:",
+                    "details": [
+                        {
+                            "value": 0.30722755,
+                            "description": "score(doc=184,freq=1.0), product of:",
+                            "details": [
+                                {
+                                    "value": 0.11945256,
+                                    "description": "queryWeight, product of:",
+                                    "details": [
+                                        {
+                                            "value": 10,
+                                            "description": "boost"
+                                        },
+                                        {
+                                            "value": 2.5719628,
+                                            "description": "idf(docFreq=173, maxDocs=838)"
+                                        },
+                                        {
+                                            "value": 0.0046444125,
+                                            "description": "queryNorm"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": 2.5719628,
+                                    "description": "fieldWeight in 184, product of:",
+                                    "details": [
+                                        {
+                                            "value": 1,
+                                            "description": "tf(freq=1.0), with freq of:",
+                                            "details": [
+                                                {
+                                                    "value": 1,
+                                                    "description": "termFreq=1.0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "value": 2.5719628,
+                                            "description": "idf(docFreq=173, maxDocs=838)"
+                                        },
+                                        {
+                                            "value": 1,
+                                            "description": "fieldNorm(doc=184)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": 5.989394,
+                    "description": "sum of:",
+                    "details": [
+                        {
+                            "value": 1.0055523,
+                            "description": "max of:",
+                            "details": [
+                                {
+                                    "value": 1.0055523,
+                                    "description": "weight(other_skills:c_sharp_^15.0 in 184) [PerFieldSimilarity], result of:",
+                                    "details": [
+                                        {
+                                            "value": 1.0055523,
+                                            "description": "score(doc=184,freq=1.0), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 0.26467526,
+                                                    "description": "queryWeight, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 15,
+                                                            "description": "boost"
+                                                        },
+                                                        {
+                                                            "value": 3.7991924,
+                                                            "description": "idf(docFreq=50, maxDocs=838)"
+                                                        },
+                                                        {
+                                                            "value": 0.0046444125,
+                                                            "description": "queryNorm"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": 3.7991924,
+                                                    "description": "fieldWeight in 184, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 1,
+                                                            "description": "tf(freq=1.0), with freq of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "termFreq=1.0"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "value": 3.7991924,
+                                                            "description": "idf(docFreq=50, maxDocs=838)"
+                                                        },
+                                                        {
+                                                            "value": 1,
+                                                            "description": "fieldNorm(doc=184)"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "value": 2.3230221,
+                            "description": "max of:",
+                            "details": [
+                                {
+                                    "value": 2.3230221,
+                                    "description": "weight(top_skills:net^25.0 in 184) [PerFieldSimilarity], result of:",
+                                    "details": [
+                                        {
+                                            "value": 2.3230221,
+                                            "description": "score(doc=184,freq=1.0), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 0.5193523,
+                                                    "description": "queryWeight, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 25,
+                                                            "description": "boost"
+                                                        },
+                                                        {
+                                                            "value": 4.4729214,
+                                                            "description": "idf(docFreq=25, maxDocs=838)"
+                                                        },
+                                                        {
+                                                            "value": 0.0046444125,
+                                                            "description": "queryNorm"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": 4.4729214,
+                                                    "description": "fieldWeight in 184, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 1,
+                                                            "description": "tf(freq=1.0), with freq of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "termFreq=1.0"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "value": 4.4729214,
+                                                            "description": "idf(docFreq=25, maxDocs=838)"
+                                                        },
+                                                        {
+                                                            "value": 1,
+                                                            "description": "fieldNorm(doc=184)"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "value": 1.8515918,
+                            "description": "max of:",
+                            "details": [
+                                {
+                                    "value": 1.8515918,
+                                    "description": "weight(top_skills:oracle^25.0 in 184) [PerFieldSimilarity], result of:",
+                                    "details": [
+                                        {
+                                            "value": 1.8515918,
+                                            "description": "score(doc=184,freq=1.0), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 0.46366897,
+                                                    "description": "queryWeight, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 25,
+                                                            "description": "boost"
+                                                        },
+                                                        {
+                                                            "value": 3.9933486,
+                                                            "description": "idf(docFreq=41, maxDocs=838)"
+                                                        },
+                                                        {
+                                                            "value": 0.0046444125,
+                                                            "description": "queryNorm"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": 3.9933486,
+                                                    "description": "fieldWeight in 184, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 1,
+                                                            "description": "tf(freq=1.0), with freq of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "termFreq=1.0"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "value": 3.9933486,
+                                                            "description": "idf(docFreq=41, maxDocs=838)"
+                                                        },
+                                                        {
+                                                            "value": 1,
+                                                            "description": "fieldNorm(doc=184)"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "value": 0.80922806,
+                            "description": "sum of:",
+                            "details": [
+                                {
+                                    "value": 0.7324034,
+                                    "description": "max of:",
+                                    "details": [
+                                        {
+                                            "value": 0.7324034,
+                                            "description": "weight(other_skills:html5^15.0 in 184) [PerFieldSimilarity], result of:",
+                                            "details": [
+                                                {
+                                                    "value": 0.7324034,
+                                                    "description": "score(doc=184,freq=1.0), product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 0.22588438,
+                                                            "description": "queryWeight, product of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 15,
+                                                                    "description": "boost"
+                                                                },
+                                                                {
+                                                                    "value": 3.2423818,
+                                                                    "description": "idf(docFreq=88, maxDocs=838)"
+                                                                },
+                                                                {
+                                                                    "value": 0.0046444125,
+                                                                    "description": "queryNorm"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "value": 3.2423818,
+                                                            "description": "fieldWeight in 184, product of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "tf(freq=1.0), with freq of:",
+                                                                    "details": [
+                                                                        {
+                                                                            "value": 1,
+                                                                            "description": "termFreq=1.0"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "value": 3.2423818,
+                                                                    "description": "idf(docFreq=88, maxDocs=838)"
+                                                                },
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "fieldNorm(doc=184)"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": 0.07682469,
+                                    "description": "max of:",
+                                    "details": [
+                                        {
+                                            "value": 0.07682469,
+                                            "description": "weight(other_skills_part_of:html^5.0 in 184) [PerFieldSimilarity], result of:",
+                                            "details": [
+                                                {
+                                                    "value": 0.07682469,
+                                                    "description": "score(doc=184,freq=1.0), product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 0.07555719,
+                                                            "description": "queryWeight, product of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 5,
+                                                                    "description": "boost"
+                                                                },
+                                                                {
+                                                                    "value": 3.2536812,
+                                                                    "description": "idf(docFreq=87, maxDocs=838)"
+                                                                },
+                                                                {
+                                                                    "value": 0.0046444125,
+                                                                    "description": "queryNorm"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "value": 1.0167754,
+                                                            "description": "fieldWeight in 184, product of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "tf(freq=1.0), with freq of:",
+                                                                    "details": [
+                                                                        {
+                                                                            "value": 1,
+                                                                            "description": "termFreq=1.0"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "value": 3.2536812,
+                                                                    "description": "idf(docFreq=87, maxDocs=838)"
+                                                                },
+                                                                {
+                                                                    "value": 0.3125,
+                                                                    "description": "fieldNorm(doc=184)"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "value": 0.010081913,
+                    "description": "weight(languages.raw:de-4 in 184) [PerFieldSimilarity], result of:",
+                    "details": [
+                        {
+                            "value": 0.010081913,
+                            "description": "score(doc=184,freq=1.0), product of:",
+                            "details": [
+                                {
+                                    "value": 0.0068428474,
+                                    "description": "queryWeight, product of:",
+                                    "details": [
+                                        {
+                                            "value": 1.4733505,
+                                            "description": "idf(docFreq=521, maxDocs=838)"
+                                        },
+                                        {
+                                            "value": 0.0046444125,
+                                            "description": "queryNorm"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": 1.4733505,
+                                    "description": "fieldWeight in 184, product of:",
+                                    "details": [
+                                        {
+                                            "value": 1,
+                                            "description": "tf(freq=1.0), with freq of:",
+                                            "details": [
+                                                {
+                                                    "value": 1,
+                                                    "description": "termFreq=1.0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "value": 1.4733505,
+                                            "description": "idf(docFreq=521, maxDocs=838)"
+                                        },
+                                        {
+                                            "value": 1,
+                                            "description": "fieldNorm(doc=184)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 0.6666667,
+            "description": "coord(4/6)"
+        }
+    ]
+}

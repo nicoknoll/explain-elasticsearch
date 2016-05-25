@@ -1,0 +1,184 @@
+{
+    "value": 1.3226905,
+    "description": "sum of:",
+    "details": [
+        {
+            "value": 0.042895623,
+            "description": "function score, product of:",
+            "details": [
+                {
+                    "value": 0.0043188673,
+                    "description": "ConstantScore(*:*), product of:",
+                    "details": [
+                        {
+                            "value": 1,
+                            "description": "boost"
+                        },
+                        {
+                            "value": 0.0043188673,
+                            "description": "queryNorm"
+                        }
+                    ]
+                },
+                {
+                    "value": 0.9932146,
+                    "description": "Math.min of",
+                    "details": [
+                        {
+                            "value": 0.9932146,
+                            "description": "Function for field location.geocode:",
+                            "details": [
+                                {
+                                    "value": 0.9932146,
+                                    "description": "exp(-0.5*pow(MIN of: [Math.max(arcDistance([51.2277411, 6.7734556](=doc value),[50.937531, 6.960278600000038](=origin)) - 10000.0(=offset), 0)],2.0)/4.5084220027780106E10)"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 3.4028235e+38,
+                            "description": "maxBoost"
+                        }
+                    ]
+                },
+                {
+                    "value": 10,
+                    "description": "queryBoost"
+                }
+            ]
+        },
+        {
+            "value": 1.2361742,
+            "description": "sum of:",
+            "details": [
+                {
+                    "value": 1.2361742,
+                    "description": "product of:",
+                    "details": [
+                        {
+                            "value": 2.4723485,
+                            "description": "sum of:",
+                            "details": [
+                                {
+                                    "value": 2.4723485,
+                                    "description": "weight(top_skills:javascript^50.0 in 108) [PerFieldSimilarity], result of:",
+                                    "details": [
+                                        {
+                                            "value": 2.4723485,
+                                            "description": "score(doc=108,freq=1.0), product of:",
+                                            "details": [
+                                                {
+                                                    "value": 0.8948915,
+                                                    "description": "queryWeight, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 50,
+                                                            "description": "boost"
+                                                        },
+                                                        {
+                                                            "value": 2.7627354,
+                                                            "description": "idf(docFreq=133, maxDocs=781)"
+                                                        },
+                                                        {
+                                                            "value": 0.006478301,
+                                                            "description": "queryNorm"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "value": 2.7627354,
+                                                    "description": "fieldWeight in 108, product of:",
+                                                    "details": [
+                                                        {
+                                                            "value": 1,
+                                                            "description": "tf(freq=1.0), with freq of:",
+                                                            "details": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "description": "termFreq=1.0"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "value": 2.7627354,
+                                                            "description": "idf(docFreq=133, maxDocs=781)"
+                                                        },
+                                                        {
+                                                            "value": 1,
+                                                            "description": "fieldNorm(doc=108)"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "value": 0.5,
+                            "description": "coord(1/2)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "value": 0.043188673,
+            "description": "function score, product of:",
+            "details": [
+                {
+                    "value": 0.0043188673,
+                    "description": "ConstantScore(*:*), product of:",
+                    "details": [
+                        {
+                            "value": 1,
+                            "description": "boost"
+                        },
+                        {
+                            "value": 0.0043188673,
+                            "description": "queryNorm"
+                        }
+                    ]
+                },
+                {
+                    "value": 1,
+                    "description": "Math.min of",
+                    "details": [
+                        {
+                            "value": 1,
+                            "description": "Function for field job_locations.geocode:",
+                            "details": [
+                                {
+                                    "value": 1,
+                                    "description": "exp(-0.5*pow(MIN of: [Math.max(arcDistance([50.937531, 6.960278600000038](=doc value),[50.937531, 6.960278600000038](=origin)) - 15000.0(=offset), 0), Math.max(arcDistance([51.2277411, 6.773455600000034](=doc value),[50.937531, 6.960278600000038](=origin)) - 15000.0(=offset), 0)],2.0)/4.508422002778011E12)"
+                                }
+                            ]
+                        },
+                        {
+                            "value": 3.4028235e+38,
+                            "description": "maxBoost"
+                        }
+                    ]
+                },
+                {
+                    "value": 10,
+                    "description": "queryBoost"
+                }
+            ]
+        },
+        {
+            "value": 0.00043188673,
+            "description": "ConstantScore(job_salary:[55000 TO 75000]), product of:",
+            "details": [
+                {
+                    "value": 1,
+                    "description": "boost"
+                },
+                {
+                    "value": 0.00043188673,
+                    "description": "queryNorm"
+                }
+            ]
+        }
+    ]
+}

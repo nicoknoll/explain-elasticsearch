@@ -1,0 +1,217 @@
+{
+   "fields": [
+      "_id",
+      "location.geocode",
+      "created_at"
+   ],
+   "from": 0,
+   "explain": true,
+   "query": {
+      "bool": {
+         "should": [
+            {
+               "function_score": {
+                  "functions": [
+                     {
+                        "gauss": {
+                           "location.geocode": {
+                              "origin": {
+                                 "lat": 53.5510846,
+                                 "lon": 9.99368179999999
+                              },
+                              "offset": "15km",
+                              "scale": "2500km"
+                           }
+                        }
+                     }
+                  ],
+                  "boost": 10
+               }
+            },
+            {
+               "dis_max": {
+                  "queries": [
+                     {
+                        "range": {
+                           "created_at": {
+                              "boost": 10,
+                              "gte": "now-1d"
+                           }
+                        }
+                     },
+                     {
+                        "range": {
+                           "created_at": {
+                              "boost": 7,
+                              "gte": "now-7d"
+                           }
+                        }
+                     },
+                     {
+                        "range": {
+                           "created_at": {
+                              "boost": 3,
+                              "gte": "now-30d"
+                           }
+                        }
+                     },
+                     {
+                        "range": {
+                           "created_at": {
+                              "boost": 1,
+                              "lte": "now-30d"
+                           }
+                        }
+                     }
+                  ],
+                  "boost": 5
+               }
+            },
+            {
+               "match": {
+                  "company_preferences": {
+                     "query": "CYT4H7TQCrjN9ms3M",
+                     "boost": 5
+                  }
+               }
+            },
+            {
+               "match": {
+                  "job_position_preferences": {
+                     "query": "rQdMyqJ6PkzypT6yF",
+                     "boost": 5
+                  }
+               }
+            },
+            {
+               "match": {
+                  "actively_looking": {
+                     "query": true,
+                     "boost": 10
+                  }
+               }
+            }
+         ],
+         "must": [
+            {
+               "bool": {
+                  "should": [
+                     {
+                        "bool": {
+                           "should": [
+                              {
+                                 "multi_match": {
+                                    "query": "java",
+                                    "operator": "or",
+                                    "type": "cross_fields",
+                                    "tie_breaker": 0,
+                                    "fields": [
+                                       "top_skills^25",
+                                       "other_skills^15"
+                                    ]
+                                 }
+                              },
+                              {
+                                 "multi_match": {
+                                    "query": "java",
+                                    "operator": "or",
+                                    "type": "cross_fields",
+                                    "tie_breaker": 0,
+                                    "fields": [
+                                       "top_skills_part_of^15",
+                                       "other_skills_part_of^5"
+                                    ]
+                                 }
+                              }
+                           ]
+                        }
+                     },
+                     {
+                        "multi_match": {
+                           "query": "scrum",
+                           "operator": "or",
+                           "type": "cross_fields",
+                           "tie_breaker": 1,
+                           "fields": [
+                              "top_skills^25",
+                              "other_skills^15"
+                           ]
+                        }
+                     }
+                  ],
+                  "minimumShouldMatch": "2<75%",
+                  "boost": 1
+               }
+            },
+            {
+               "bool": {
+                  "should": [
+                     {
+                        "function_score": {
+                           "functions": [
+                              {
+                                 "gauss": {
+                                    "job_locations.geocode": {
+                                       "origin": {
+                                          "lat": 53.5510846,
+                                          "lon": 9.99368179999999
+                                       },
+                                       "offset": "15km",
+                                       "scale": "2500km"
+                                    }
+                                 }
+                              }
+                           ],
+                           "boost": 10
+                        }
+                     }
+                  ]
+               }
+            }
+
+         ],
+         "must_not": []
+      }
+   },
+   "filter": {
+      "bool": {
+         "should": [],
+         "must": [
+            {
+               "bool": {
+                  "should": [
+                     {
+                        "geo_distance": {
+                           "distance": "50km",
+                           "job_locations.geocode": {
+                              "lat": 53.5510846,
+                              "lon": 9.99368179999999
+                           }
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+                "numeric_range": {
+                    "job_salary": {
+                        "gte": 50000,
+                        "lte": 75000
+                    }
+                }
+            }
+         ],
+         "must_not": [
+            {
+               "terms": {
+                  "exclude_companies": [
+                     "youval"
+                  ]
+               }
+            }
+        ]
+      }
+   },
+   "size": 100,
+   "min_score": 0
+}
