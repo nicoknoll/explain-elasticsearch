@@ -61,7 +61,8 @@ app.get('/submit/', function (req, res) {
 
 
 app.get('/', function (req, res) {
-   res.sendFile(__dirname + '/views/index.html');
+    res.redirect('/submit/');
+   //res.sendFile(__dirname + '/views/index.html');
 });
 
 
