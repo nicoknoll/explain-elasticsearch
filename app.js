@@ -8,6 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+app.set('port', (process.env.PORT || 3300));
 
 
 app.get('/api/explanations', function (req, res) {
@@ -66,6 +67,6 @@ app.get('/', function (req, res) {
 
 
 
-app.listen(3300, function () {
-	console.log('DEMO listening on port 3300!');
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
 });
