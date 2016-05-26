@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    var resultWrapper = $('#result');
+    resultWrapper.addClass('hide');
+    $('body').addClass('no-scroll');
+
 
     var jsonTextarea = $('#explanation-json');
     var submitButton = $('.btn-submit');
@@ -7,11 +11,14 @@ $(document).ready(function(){
     var editButton = $('.btn-edit');
     var explanationJsonWrapper = $('#explanation-json-wrapper');
 
+
     editButton.addClass('hide');
     editButton.on('click',function(){
         explanationJsonWrapper.removeClass('hide');
 
         editButton.addClass('hide');
+        $('body').addClass('no-scroll');
+        resultWrapper.addClass('hide');
         submitButton.removeClass('hide');
     });
 
@@ -89,6 +96,8 @@ $(document).ready(function(){
 
         submitButton.addClass('hide');
         editButton.removeClass('hide');
+        $('body').removeClass('no-scroll');
+        resultWrapper.removeClass('hide');
 
         var explanations = {};
         $.ajax({

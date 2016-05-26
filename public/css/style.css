@@ -11,6 +11,10 @@ body {
     font-size:14px;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .tooltip-link {
     position: relative;
     cursor:help;
@@ -149,6 +153,16 @@ section {
     position: relative;
     width:100%;
     float:left;
+    height:auto;
+    overflow:hidden;
+    box-sizing:border-box;
+    display: block;
+}
+
+
+#result.hide {
+    height:0px;
+    display: none;
 }
 
 .action-wrapper {
