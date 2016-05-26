@@ -28,8 +28,8 @@ $(document).ready(function(){
 
         editButton.addClass('hide');
         $('body').addClass('no-scroll');
-        $('body').removeClass('show-form');
-        $('body').addClass('show-edit');
+        $('body').addClass('show-form');
+        $('body').removeClass('show-edit');
         resultWrapper.addClass('hide');
         submitButton.removeClass('hide');
     });
