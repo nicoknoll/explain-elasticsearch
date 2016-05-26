@@ -2,11 +2,21 @@ $(document).ready(function(){
     var resultWrapper = $('#result');
     resultWrapper.addClass('hide');
     $('body').addClass('no-scroll');
+    $('body').addClass('show-form');
 
 
     var jsonTextarea = $('#explanation-json');
     var submitButton = $('.btn-submit');
     submitButton.addClass('disable');
+
+    var aside = $('aside');
+    aside.addClass('hide');
+    var infoButton = $('.btn-info');
+    infoButton.on('click', function(){
+        aside.toggleClass('hide');
+        infoButton.toggleClass('active');
+    });
+
 
     var editButton = $('.btn-edit');
     var explanationJsonWrapper = $('#explanation-json-wrapper');
@@ -18,6 +28,8 @@ $(document).ready(function(){
 
         editButton.addClass('hide');
         $('body').addClass('no-scroll');
+        $('body').removeClass('show-form');
+        $('body').addClass('show-edit');
         resultWrapper.addClass('hide');
         submitButton.removeClass('hide');
     });
@@ -94,6 +106,8 @@ $(document).ready(function(){
 
         explanationJsonWrapper.addClass('hide');
 
+        $('body').removeClass('show-form');
+        $('body').addClass('show-edit');
         submitButton.addClass('hide');
         editButton.removeClass('hide');
         $('body').removeClass('no-scroll');

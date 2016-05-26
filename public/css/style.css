@@ -80,7 +80,7 @@ body.no-scroll {
 }
 
 .slide-control a {
-    color:#777;
+    color:#19cc95;
     text-transform: uppercase;
     text-decoration: none;
     font-weight:600;
@@ -90,7 +90,7 @@ body.no-scroll {
 }
 
 .slide-control a:hover {
-    color:#222;
+    color:#15ad7e;
 }
 
 
@@ -115,7 +115,6 @@ section {
 
 #explanation-json {
     border:0px;
-    border-bottom:1px solid #EEE;
     width:100%;
     max-width:100%;
     height:100%;
@@ -173,7 +172,8 @@ section {
     float:left;
     text-align:center;
     padding:20px 0px;
-    border-bottom:1px solid #eee;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #EEE;
 }
 
 .action-wrapper .btn.disable {
@@ -199,6 +199,7 @@ section {
     cursor: pointer;
     outline:0px;
     box-sizing:border-box;
+    text-align: center;
 }
 
 .action-wrapper .btn.hide {
@@ -211,7 +212,71 @@ section {
 }
 
 
-.action-wrapper .btn:active {
+.action-wrapper .btn:active,
+.action-wrapper .btn.active {
     background: #15ad7e;
     border-color: #15ad7e;
+    color:#fff;
+}
+
+
+.action-wrapper .btn.btn-info {
+    width:40px;
+    padding:0px;
+    height:40px;
+    float:left;
+    position: relative;
+    z-index: 200;
+    margin-left:20px;
+}
+
+aside {
+    width:300px;
+    float:left;
+    position: fixed;
+    top:0px;
+    height:100%;
+    left:0px;
+    background: #fff;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+    z-index:100;
+    padding:30px;
+    box-sizing:border-box;
+    transition:.3s left;
+}
+
+aside.hide {
+    left:-400px;
+}
+
+body.show-edit aside {
+    padding-top:90px;
+}
+
+aside h3 {
+    font-weight:500;
+    font-size:20px;
+}
+
+aside h4 {
+    font-weight:500;
+    margin-bottom:24px;
+    font-size:16px;
+    color:#777;
+}
+
+aside p {
+    font-size:14px;
+    line-height:24px;
+    margin-bottom:24px;
+    color:#555;
+}
+
+aside a {
+    color:#19cc95;
+    text-decoration: none;
+}
+
+aside a:hover {
+    color:#15ad7e;
 }
