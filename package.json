@@ -4,13 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-      "start": "node app.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/NicoKnoll/explain-elasticsearch.git"
-    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoKnoll/explain-elasticsearch.git"
+  },
   "author": "Nico Knoll",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "require-all": "^3.0.0"
+  }
 }
